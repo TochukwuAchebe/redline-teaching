@@ -196,3 +196,7 @@ docs/                architecture, guideline coverage, deployment, accessibility
 - **Rendering.** LibreOffice can wrap text slightly differently from PowerPoint, so previews aren't pixel-perfect.
 - **One shared password.** Fine for a demo; a real deployment needs single sign-on so every decision is recorded per person.
 - **The demo decks are small.** They show each rule working; they are not evidence of accuracy on real client decks. The strongest evidence is reviewers scoring the tool on their own decks.
+
+## Licence
+
+MIT: see [LICENSE](LICENSE). Use, adapt and share the code freely, including in your own courses. The example guideline, demo decks and the companies and figures in them are fictional.
