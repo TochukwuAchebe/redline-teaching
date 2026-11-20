@@ -1,0 +1,18 @@
+# Planted issues in demo-with-issues.pptx (built by scripts/make_sample_decks.py).
+# "by: code" items are caught by deterministic rules; "by: ai" items need the AI review (ANTHROPIC_API_KEY).
+# demo-clean.pptx is the control: the code checks should raise nothing on it.
+issues:
+  - {slide: 1, rule: TITLESLIDE_DRAFT, by: code, what: "Title slide still says DRAFT"}
+  - {slide: 1, rule: TITLESLIDE_AUTHORS, by: code, what: "No author block on the title slide"}
+  - {slide: 2, rule: TITLE_PUNCTUATION, by: code, what: "Headline ends with a full stop"}
+  - {slide: 2, rule: BULLET_PUNCTUATION, by: code, what: "A bullet ends with a full stop"}
+  - {slide: 2, rule: BULLET_FONT, by: code, what: "A bullet is set at 12 pt instead of 16 pt"}
+  - {slide: 3, rule: COLOR_OFF_PALETTE, by: code, what: "Table header filled #1F4E79, not #006EBE"}
+  - {slide: 3, rule: TERM_PERCENTILE, by: code, what: "\"Percentile\" instead of \"%ile\""}
+  - {slide: 3, rule: TABLE_MISSING_VALUE, by: code, what: "\"N/A\" instead of an en-dash"}
+  - {slide: 3, rule: TERM_TGT, by: code, what: "\"TGT\" instead of \"Target\""}
+  - {slide: 4, rule: CONF_MISSING, by: code, what: "Confidentiality statement removed"}
+  - {slide: 5, rule: COLOR_OFF_PALETTE, by: code, what: "Orange text #FF6600"}
+  - {slide: 5, rule: LEFTOVER_COMMENT, by: code, what: "\"TODO\" note left on the slide"}
+  - {slide: 6, rule: TITLE_TOPIC_ONLY, by: code, what: "Topic-only headline (the AI review also suggests a takeaway)"}
+  - {slide: 6, rule: BULLET_PARALLEL, by: ai, what: "Bullets mix a verb phrase, a full sentence and an infinitive"}

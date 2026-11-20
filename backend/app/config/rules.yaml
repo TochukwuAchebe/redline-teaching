@@ -1,0 +1,199 @@
+# Defaults from the guideline's written requirements. Disputed rules are suggestions (see acme_policy.py).
+TEMPLATE_NONCONFORMING:
+  enabled: true
+  params:
+    title_font: Calibri
+    title_size_pt: 24
+    body_size_pt: 16
+CONF_MISSING:
+  enabled: true
+  params:
+    # Used when the deck's own master carries no confidentiality statement.
+    text: These materials are confidential and to be used only by the client to whom they are addressed
+CONF_TEXT_MODIFIED:
+  enabled: true
+CONF_MOVED:
+  enabled: true
+  params:
+    tolerance_in: 0.05
+CONF_STYLE:
+  enabled: true
+  params:
+    size_pt: 8
+    font: Calibri
+CONF_OVERLAP:
+  enabled: true
+TITLESLIDE_DRAFT:
+  enabled: true
+TITLESLIDE_DATE:
+  enabled: true
+TITLESLIDE_AUTHORS:
+  enabled: true
+TITLESLIDE_FONT:
+  enabled: true
+  params:
+    size_pt: 24
+    font: Calibri
+TITLE_FONT:
+  enabled: true
+  params:
+    size_pt: 24
+    font: Calibri
+    bold: true
+TITLE_VERTICAL_ALIGNMENT:
+  enabled: true
+  severity: suggestion
+TITLE_POSITION:
+  enabled: true
+  params:
+    tolerance_in: 0.05
+TITLE_TOO_LONG:
+  enabled: true
+  params:
+    max_lines: 3
+TITLE_PUNCTUATION:
+  enabled: true
+TITLE_TOPIC_ONLY:
+  # Code backstop for the agent's takeaway check: short verbless labels only.
+  enabled: true
+TITLE_BODY_OVERLAP:
+  enabled: true
+  params:
+    # Line height is estimated, so only a clear collision is reported.
+    tolerance_in: 0.25
+SHAPE_FONT:
+  enabled: true
+  params:
+    font: Calibri
+BULLET_FONT:
+  enabled: true
+  params:
+    size_pt: 16
+    font: Calibri
+BULLET_GLYPH:
+  enabled: true
+BULLET_INDENT:
+  enabled: true
+  params:
+    tolerance_in: 0.05
+BULLET_SPACING:
+  enabled: true
+BULLET_PUNCTUATION:
+  enabled: true
+TABLE_FONT:
+  enabled: true
+  params:
+    min_pt: 10
+    max_pt: 12
+    font: Calibri
+TABLE_HEADER_STYLE:
+  enabled: true
+  params:
+    fill: 006EBE
+TABLE_HEADER_SIZE_INCONSISTENT:
+  enabled: true
+TABLE_ZEBRA:
+  enabled: true
+  params:
+    fill: F2F2F2
+TABLE_STATS_ROW:
+  enabled: true
+  params:
+    fill: FFFFDB
+TABLE_CLIENT_ROW:
+  enabled: true
+  params:
+    fill: F1FFE1
+TABLE_CELL_MARGIN:
+  enabled: true
+  # Learned from the annotated review, not written in the guideline: advisory.
+  severity: suggestion
+  params:
+    margin_in: 0.03
+    tolerance_in: 0.01
+TABLE_BORDERS:
+  enabled: true
+TABLE_NUMBER_FORMAT:
+  enabled: true
+TABLE_MISSING_VALUE:
+  enabled: true
+TABLE_UNITS_MISSING:
+  enabled: true
+TABLE_CAPTION:
+  enabled: true
+  params:
+    size_pt: 14
+    tolerance_in: 0.05
+TABLE_MERGED_CELL:
+  enabled: true
+TERM_PERCENTILE:
+  enabled: true
+TERM_INCUMBENT:
+  enabled: true
+TERM_TGT:
+  enabled: true
+LEFTOVER_COMMENT:
+  enabled: true
+FOOTNOTE_UNMATCHED:
+  enabled: true
+FOOTNOTE_STYLE:
+  enabled: true
+  params:
+    size_pt: 10
+SOURCE_NOTE_STYLE:
+  enabled: true
+  params:
+    size_pt: 9
+COLOR_OFF_PALETTE:
+  enabled: true
+KEY_LABEL_INCONSISTENT:
+  enabled: true
+KEY_ORDER_INCONSISTENT:
+  enabled: true
+  severity: suggestion
+KEY_SPACING:
+  enabled: true
+  severity: suggestion
+  params:
+    tolerance_in: 0.05
+    relative_tolerance: 0.25
+    minimum_variation_pt: 1.0
+KEY_BOX_INCONSISTENT:
+  enabled: true
+  params:
+    tolerance_in: 0.05
+KEY_MISSING_LABEL:
+  enabled: true
+CLIENT_NAME_INCONSISTENT:
+  enabled: true
+  # Learned from the annotated review, not written in the guideline: advisory.
+  severity: suggestion
+HEADER_TERM_INCONSISTENT:
+  enabled: true
+  # The annotated review asks for "Company"; a preferred term beats a majority vote across tables.
+  params:
+    preferred: Company
+    # Interchangeable header wordings; within a deck one wording should be used throughout.
+    groups:
+      - [Company, Company Name]
+      - [Base Salary, Base Pay, Salary]
+      - [Target Bonus, Target Annual Incentive, Target STI]
+      - [Long-Term Incentive, Long-Term Incentives, LTI]
+      - [Total Direct Compensation, TDC]
+TERM_INCONSISTENT:
+  enabled: true
+  # Names for the same plan; a deck should use one throughout its slide text. Only names that mean
+  # the same thing belong together: LTI (an award) and LTIP (a plan) are deliberately not grouped.
+  params:
+    groups:
+      - AIP: [AIP, annual incentive plan]
+        STIP: [STIP, short-term incentive plan]
+        STI: [STI, short-term incentive]
+        annual bonus plan: [annual bonus plan]
+MARGIN_EDGE:
+  enabled: true
+  severity: suggestion
+  params:
+    min_left_in: 1
+INITIALS_PUNCTUATION:
+  enabled: true

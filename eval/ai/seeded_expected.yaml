@@ -1,0 +1,35 @@
+deck: eval/ai/seeded-writing.pptx
+expected:
+- slide: 1
+  rule: TITLE_TAKEAWAY
+- slide: 2
+  rule: TITLE_TAKEAWAY
+- slide: 3
+  rule: TITLE_TAKEAWAY
+- slide: 4
+  rule: TITLE_CASE
+  fix_contains: Annual bonus payouts increased
+- slide: 5
+  rule: BULLET_PARALLEL
+- slide: 6
+  rule: BULLET_PARALLEL
+- slide: 7
+  rule: BULLET_PARALLEL
+- slide: 8
+  rule: TYPO
+  fix_contains: committee
+- slide: 9
+  rule: TYPO
+  fix_contains: return
+- slide: 10
+  rule: TYPO
+  fix_contains: reviewed
+clean_slides:
+- 11
+- 12
+- 13
+- 14
+- 15
+- 16
+- 17
+- 18

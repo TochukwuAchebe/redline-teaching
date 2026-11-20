@@ -1,0 +1,46 @@
+{
+  "source_commit": "bfee38fd3c7c8db6bc95501c310c2135f8047037",
+  "harness_sha256": "337552630542ce8432fbae319e03bf2d66c7ba96aaa89274b3fbb3c49e1ec285",
+  "scope": "Local HTTP + PostgreSQL + real LibreOffice; local object adapter; no AI or Azure",
+  "platform": {
+    "system": "Darwin",
+    "architecture": "arm64",
+    "logical_cpus": 12
+  },
+  "queue_limit": 4,
+  "worker_concurrency": 1,
+  "events": [
+    "Baseline 12-slide review completed using real extraction/rendering.",
+    "Four waiting reviews admitted; fifth rejected with a clear queue-full response.",
+    "Waiting review cancelled before processing; no result published.",
+    "API process restarted; existing session, completed review and queued work preserved.",
+    "Worker interrupted during rendering; replacement must recover through the real 60-second lease.",
+    "Concurrent decisions on completed review saved without lost updates while replacement worker serves queue.",
+    "All three remaining reviews completed; interrupted review claimed twice; cancellation and decisions remained intact."
+  ],
+  "slides_per_deck": 12,
+  "deck_bytes": 38307,
+  "deck_sha256": "2e8a9b295559b9688f739010a274ecac1c145b5961305abc565efc52aa1a6ca0",
+  "baseline_completion_seconds": 2.9411082079750486,
+  "queue_full_status": 409,
+  "concurrent_decision_writes": 32,
+  "decision_batch_seconds": 0.06080495804781094,
+  "worker_recovery_seconds": 62.3400990840164,
+  "recovered_job_attempts": 2,
+  "completed_burst_reviews": 3,
+  "cancelled_reviews": 1,
+  "all_recovered_previews_available": true,
+  "passed": true,
+  "elapsed_seconds": 67.86512304202188,
+  "http": {
+    "samples": 509,
+    "successful_samples": 508,
+    "median_ms": 8.408249996136874,
+    "p95_ms": 44.984708016272634,
+    "max_ms": 53.403416997753084,
+    "status_counts": {
+      "200": 508,
+      "409": 1
+    }
+  }
+}
